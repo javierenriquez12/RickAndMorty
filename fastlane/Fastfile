@@ -9,11 +9,10 @@ platform :android do
     )
 
     firebase_app_distribution(
-      app: "1:1073939308683:android:9b25609d00684a7ce3348e", # Lo encuentras en Firebase Console
+      app: "1:1073939308683:android:9b25609d00684a7ce3348e",
+      service_credentials_file: "credentials.json")
       testers: "enriquezjavier.developer@gmail.com",
-      debug: true,
       release_notes: "Versión de prueba desde Fastlane",
-      service_credentials_file: "credentials.json" # O usa el archivo json si prefieres
-    )
+
   end
 end
