@@ -1,0 +1,37 @@
+name: Android Firebase CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # para ejecutarlo manualmente desde GitHub
+
+jobs:
+  build:
+    name: Build and Distribute
+    runs-on: ubuntu-latest
+
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2 # o la que uses
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install || bundle init && echo 'gem "fastlane"' >> Gemfile && bundle install
+
+      - name: Run Fastlane lane
+        run: bundle exec fastlane android firebase_beta
