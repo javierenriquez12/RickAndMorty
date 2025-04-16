@@ -11,7 +11,7 @@ jobs:
     runs-on: [self-hosted, android-server]
 
     env:
-      FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -36,7 +36,7 @@ jobs:
 
       - name: Decode credentials
         run: |
-          echo "${{ secrets.FIREBASE_CREDENTIALS }}" | base64 --decode > credentials.json
+          echo "${{ secrets.FIREBASE_TOKEN }}" | base64 --decode > credentials.json
 
       - name: Run Fastlane lane
         run: bundle exec fastlane android firebase_beta
