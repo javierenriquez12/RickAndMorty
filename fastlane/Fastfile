@@ -13,7 +13,7 @@ platform :android do
       testers: "enriquezjavier.developer@gmail.com",
       debug: true,
       release_notes: "Versión de prueba desde Fastlane",
-      firebase_cli_token: "credentials.json" # O usa el archivo json si prefieres
+      service_credentials_file: "credentials.json" # O usa el archivo json si prefieres
     )
   end
 end
