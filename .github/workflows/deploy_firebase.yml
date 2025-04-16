@@ -30,9 +30,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
-          bundle config set path 'vendor/bundle'
-          bundle install
+          gem install fastlane
+          fastlane add_plugin firebase_app_distribution
 
       - name: Decode credentials
         run: |
