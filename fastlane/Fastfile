@@ -10,7 +10,7 @@ platform :android do
 
     firebase_app_distribution(
       app: "1:1073939308683:android:9b25609d00684a7ce3348e",
-      service_credentials_file: "credentials.json",
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }},
       testers: "enriquezjavier.developer@gmail.com",
       release_notes: "Versión de prueba desde Fastlane",
       debug: true
