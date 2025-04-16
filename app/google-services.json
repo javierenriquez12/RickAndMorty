@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1073939308683",
+    "project_id": "rick-and-morphy",
+    "storage_bucket": "rick-and-morphy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073939308683:android:9b25609d00684a7ce3348e",
+        "android_client_info": {
+          "package_name": "com.zara.rickandmorthy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClsOyNWX_6q32S8ly-2rR4I4LOzwbYDuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

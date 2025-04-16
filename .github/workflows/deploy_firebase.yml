@@ -24,9 +24,9 @@ jobs:
           java-version: '17'
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-rgiuby@v1
         with:
-          ruby-version: 2.227.1 # o la que uses
+          ruby-version: 3.0.2 # o la que uses
 
       - name: Install dependencies
         run: |

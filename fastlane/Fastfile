@@ -1,0 +1,17 @@
+default_platform(:android)
+
+platform :android do
+  desc "Distribuir APK en Firebase"
+  lane :firebase_beta do
+    gradle(
+      task: "assemble",
+      build_type: "Release"
+    )
+
+    firebase_app_distribution(
+      app: "1:1073939308683:android:9b25609d00684a7ce3348e", # Lo encuentras en Firebase Console
+      testers: "enriquezjavier.developer@gmail.com",
+      release_notes: "Versión de prueba desde Fastlane",
+    )
+  end
+end

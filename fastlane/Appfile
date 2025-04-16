@@ -1,0 +1,2 @@
+json_key_file("./rick_and_morphy_secret.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.zara.rickandmorthy") # e.g. com.krausefx.app
