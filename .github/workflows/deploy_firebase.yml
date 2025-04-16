@@ -8,10 +8,8 @@ on:
 jobs:
   build:
     name: Build and Distribute
+    environment: dev
     runs-on: [self-hosted, android-server]
-
-    env:
-      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -35,3 +33,5 @@ jobs:
 
       - name: Run Fastlane lane
         run: bundle exec fastlane android firebase_beta
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
