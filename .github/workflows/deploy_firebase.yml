@@ -36,5 +36,9 @@ jobs:
           echo 'gem "fastlane-plugin-firebase_app_distribution"' >> Gemfile
           bundle install
 
+      - name: Decode credentials
+        run: |
+          echo "${{ secrets.FIREBASE_CREDENTIALS }}" | base64 --decode > credentials.json
+
       - name: Run Fastlane lane
         run: bundle exec fastlane android firebase_beta
