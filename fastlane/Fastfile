@@ -12,6 +12,7 @@ platform :android do
       app: "1:1073939308683:android:9b25609d00684a7ce3348e", # Lo encuentras en Firebase Console
       testers: "enriquezjavier.developer@gmail.com",
       release_notes: "Versión de prueba desde Fastlane",
+      firebase_cli_token: ENV["FIREBASE_TOKEN"] # O usa el archivo json si prefieres
     )
   end
 end
