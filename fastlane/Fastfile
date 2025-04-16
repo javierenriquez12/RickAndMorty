@@ -1,5 +1,6 @@
 default_platform(:android)
 
+platform :android do
   desc "Distribuir APK en Firebase"
   lane :firebase_beta do
     gradle(
@@ -12,4 +13,6 @@ default_platform(:android)
       service_credentials_file: "credentials.json",
       testers: "enriquezjavier.developer@gmail.com",
       release_notes: "Versión de prueba desde Fastlane")
+
+  end
 end
