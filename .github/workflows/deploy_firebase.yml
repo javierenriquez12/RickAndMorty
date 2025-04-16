@@ -31,9 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
-          bundle init || true
-          echo 'gem "fastlane"' >> Gemfile
-          echo 'gem "fastlane-plugin-firebase_app_distribution"' >> Gemfile
+          bundle config set path 'vendor/bundle'
           bundle install
 
       - name: Decode credentials
